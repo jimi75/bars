@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Bar }  from '../bar';
-import { BARS } from '../mock-bars';
+import { Bar }        from '../bar';
+import { BARS }       from '../mock-bars';
+import { BarService } from '../bar.service';
 
 @Component({
   selector: 'app-bars',
@@ -11,16 +12,16 @@ import { BARS } from '../mock-bars';
 
 export class BarsComponent implements OnInit {
 
-  bars = BARS;
-
   selectedBar: Bar;
+  bars: Bar[];
+  drinkImg: string;
 
-  drinkImg = 'https://mattsko.files.wordpress.com/2015/05/lucille-drunk.gif';
+  constructor(
+    private barService: BarService
+  ) { }
 
-  constructor() { }
-
-  ngOnInit() {
-    
+  getBars(): void {
+    this.bars = this.barService.getBars();
   }
 
   onSelect(bar: Bar): void {
@@ -40,7 +41,12 @@ export class BarsComponent implements OnInit {
     setTimeout(function() {
       bar.image_url = originalImg;
     }, 2000);
-  
+
+  }
+
+  ngOnInit() {
+    this.drinkImg = 'https://mattsko.files.wordpress.com/2015/05/lucille-drunk.gif';
+    this.getBars();
   }
 
 }
