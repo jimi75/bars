@@ -14,4 +14,8 @@ export class BarService {
     return of(BARS);
   }
 
+  getBar(id: number): Observable<Bar> {
+    return of(BARS.find(bar => bar.id === id));
+  }
+
 }

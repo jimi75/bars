@@ -9,7 +9,7 @@
         <div>
           <button class="expanded alert button" (click)="onDrink(bar)">Drink on this Bar</button>
           <div class="expanded button-group">
-            <button class="button" (click)="onSelect(bar)">View bar</button>
+            <a class="button" routerLink="/bars/{{ bar.id }}" (click)="onSelect(bar)">View bar</a>
             <button class="button" data-open="editBar">Edit bar</button>
           </div>
         </div>

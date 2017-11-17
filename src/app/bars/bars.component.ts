@@ -51,4 +51,3 @@ export class BarsComponent implements OnInit {
   }
 
 }
-

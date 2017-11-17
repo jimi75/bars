@@ -6,8 +6,8 @@ import { BarDetailComponent }   from './bar-detail/bar-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/bars', pathMatch: 'full' },
-  { path: 'bars/:id', component: BarDetailComponent },
-  { path: 'bars', component: BarsComponent }
+  { path: 'bars', component: BarsComponent },
+  { path: 'bars/:id', component: BarsComponent },
 ];
 
 @NgModule({
