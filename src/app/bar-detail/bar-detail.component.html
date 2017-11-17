@@ -1,0 +1,7 @@
+<div *ngIf="bar" class="mask"></div>
+<div *ngIf="bar" class="bar-modal" id="bar-{{ bar.id }}">
+  <i class="close" (click)="onModalClosed(bar)">X</i>
+  <h2>{{ bar.title | uppercase }}</h2>
+  <p>{{ bar.content }}</p>
+  <img src="{{ bar.image_url }}">
+</div>
