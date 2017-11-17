@@ -3,5 +3,6 @@
   <i class="close" (click)="onModalClosed(bar)">X</i>
   <h2>{{ bar.title | uppercase }}</h2>
   <p>{{ bar.content }}</p>
-  <img src="{{ bar.image_url }}">
+  <div id="map" class="map"></div>
+  <p>{{ address }}</p>
 </div>

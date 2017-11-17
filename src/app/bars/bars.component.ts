@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Bar }        from '../bar';
-import { BARS }       from '../mock-bars';
-import { BarService } from '../bar.service';
+import { Bar }            from '../bar';
+import { BARS }           from '../mock-bars';
+import { BarService }     from '../bar.service';
 
 @Component({
   selector: 'app-bars',
@@ -29,14 +29,14 @@ export class BarsComponent implements OnInit {
     this.selectedBar = bar;
   }  
 
-  onClose() {
+  onClose(): void {
     this.selectedBar = null;
   }
 
   onDrink(bar: Bar): void {
     
     let originalImg = bar.image_url;
-    
+  
     bar.image_url = this.drinkImg
     
     setTimeout(function() {

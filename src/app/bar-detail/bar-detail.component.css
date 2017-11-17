@@ -36,3 +36,8 @@
   font-size: 2em;
   cursor: pointer;
 }
+
+.map {
+  height: 200px;
+  margin-bottom: 15px;
+}

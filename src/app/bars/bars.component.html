@@ -5,11 +5,10 @@
         <img src="{{ bar.image_url }}">
         <h4>{{ bar.title | uppercase }}</h4>
         <p>{{ bar.content }}</p>
-        <p>{{ bar.lat + ' ' + bar.long }}</p>
         <div>
           <button class="expanded alert button" (click)="onDrink(bar)">Drink on this Bar</button>
           <div class="expanded button-group">
-            <a class="button" routerLink="/bars/{{ bar.id }}" (click)="onSelect(bar)">View bar</a>
+            <a class="button" routerLink="/bars/{{ bar.id }}">View bar</a>
             <button class="button" data-open="editBar">Edit bar</button>
           </div>
         </div>
@@ -18,4 +17,4 @@
   </article>
 </div>
 
-<app-bar-detail [bar]="selectedBar" (close)="onClose($event)"></app-bar-detail>
+<app-bar-detail [bar]="selectedBar" (close)="onClose()"></app-bar-detail>
