@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of }         from 'rxjs/observable/of';
 
 import { Bar }   from './bar';
 import { BARS }  from './mock-bars';
@@ -8,8 +10,8 @@ export class BarService {
 
   constructor() { }
 
-  getBars(): Bar[] {
-    return BARS;
+  getBars(): Observable<Bar[]> {
+    return of(BARS);
   }
 
 }

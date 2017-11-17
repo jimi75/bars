@@ -21,7 +21,8 @@ export class BarsComponent implements OnInit {
   ) { }
 
   getBars(): void {
-    this.bars = this.barService.getBars();
+    this.barService.getBars()
+      .subscribe(bars => this.bars = bars);
   }
 
   onSelect(bar: Bar): void {
