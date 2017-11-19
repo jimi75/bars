@@ -11,6 +11,9 @@ import { BarDetailComponent } from './bar-detail/bar-detail.component';
 import { BarService }         from './bar.service';
 import { BarEditComponent }   from './bar-edit/bar-edit.component';
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }            from './in-memory-data.service';
+
 
 @NgModule({
   declarations: [
