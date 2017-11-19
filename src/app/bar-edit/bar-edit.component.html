@@ -1,0 +1,47 @@
+<div class="grid-x grid-margin-y" *ngIf="bar" id="bar-{{ bar.id }}">
+  <div class="cell">
+    <h2>EDIT BAR</h2>
+  </div>
+  <div class="cell medium-6">
+    <div class="grid-x">
+      <div class="cell">
+        <h4 class="cell">Modify bar info</h4>
+      </div>
+      <div class="cell">
+        <div class="input-group"> 
+          <span class="input-group-label">Title</span>    
+          <input class="input-group-field" type="text" [(ngModel)]="bar.title" placeholder="Type a bar name">
+        </div>
+      </div>
+      <div class="cell">
+        <div class="input-group"> 
+          <span class="input-group-label">Content</span>
+          <input class="input-group-field" type="text" [(ngModel)]="bar.content" placeholder="Type a bar content">
+        </div>
+      </div>
+      <div class="cell medium-6">
+        <div class="input-group"> 
+          <span class="input-group-label">Lng</span>
+          <input class="input-group-field" type="text" [(ngModel)]="bar.lat" placeholder="Type a latitud">
+        </div>
+      </div>
+      <div class="cell medium-6">
+        <div class="input-group"> 
+          <span class="input-group-label">Lat</span>
+          <input class="input-group-field" type="text" [(ngModel)]="bar.long" placeholder="Type a longitud">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid-x grid-margin-x">
+  <h4 class="cell">Choose a zombie for this bar</h4>
+  <div class="cell medium-2 zombie" *ngFor="let zombie of zombies" [class.selected]="zombie === selectedZombie">
+    <img class="thumbnail" src="{{ zombie }}" (click)="onZombieSelected(zombie)">
+  </div>
+  <div class="cell">
+    <button class="button" (click)="save()">SAVE BAR</button>
+  </div>
+</div>
+
+
