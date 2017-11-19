@@ -2,6 +2,7 @@
   <article class="cell medium-3 bar" *ngFor="let bar of bars">
     <div class="grid-x grid-margin-x">
       <div class="cell">
+        <a class="delete" (click)="onDelete(bar)">X</a>
         <div class="img-container">
           <img src="{{ bar.image_url }}">
         </div>

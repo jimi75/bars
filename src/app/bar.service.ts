@@ -27,4 +27,9 @@ export class BarService {
     return of(bar);
   }
 
+  deleteBar(bar: Bar): Observable<Bar> {
+    BARS.splice([BARS.findIndex(el => el.id === bar.id)], 1);
+    return of(BARS);
+  }
+
 }

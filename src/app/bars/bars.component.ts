@@ -33,16 +33,18 @@ export class BarsComponent implements OnInit {
     this.selectedBar = null;
   }
 
+  onDelete(bar: Bar): void {
+    this.barService.deleteBar(bar);
+  }
+
   onDrink(bar: Bar): void {
     
     let originalImg = bar.image_url;
-  
     bar.image_url = this.drinkImg
     
     setTimeout(function() {
       bar.image_url = originalImg;
     }, 2000);
-
   }
 
   ngOnInit() {
