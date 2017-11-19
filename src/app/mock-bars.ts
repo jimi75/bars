@@ -7,7 +7,7 @@ export const BARS: Bar[] = [
     content: 'Great Bar!',
     lat: '41.377698',
     long: '2.174693',
-    image_url: 'http://placezombie.com/245x200'
+    image_url: 'http://placezombie.com/245x245'
   },
   { 
     id: 2,
@@ -15,7 +15,7 @@ export const BARS: Bar[] = [
     content: 'Full of güiris',
     lat: '41.3782442',
     long: '2.1711996',
-    image_url: 'http://placezombie.com/246x201'
+    image_url: 'http://placezombie.com/255x255'
   },
   { 
     id: 3,
@@ -23,7 +23,7 @@ export const BARS: Bar[] = [
     content: 'So expensive!',
     lat: '41.3927591',
     long: '2.1540928',
-    image_url: 'http://placezombie.com/244x199'
+    image_url: 'http://placezombie.com/265x265'
   },
   { 
     id: 4,
@@ -31,6 +31,6 @@ export const BARS: Bar[] = [
     content: 'Maybe the best one!',
     lat: '41.3846648',
     long: '2.1702702',
-    image_url: 'http://placezombie.com/243x198' 
+    image_url: 'http://placezombie.com/275x275' 
   }
 ];

@@ -2,14 +2,16 @@
   <article class="cell medium-3 bar" *ngFor="let bar of bars">
     <div class="grid-x grid-margin-x">
       <div class="cell">
-        <img src="{{ bar.image_url }}">
+        <div class="img-container">
+          <img src="{{ bar.image_url }}">
+        </div>
         <h4>{{ bar.title | uppercase }}</h4>
         <p>{{ bar.content }}</p>
         <div>
           <button class="expanded alert button" (click)="onDrink(bar)">Drink on this Bar</button>
           <div class="expanded button-group">
-            <a class="button" routerLink="/bars/{{ bar.id }}">View bar</a>
-            <button class="button" data-open="editBar">Edit bar</button>
+            <a class="button" routerLink="/bars/{{ bar.id }}">Bar address</a>
+            <a class="button" routerLink="/bars/edit/{{ bar.id }}">Edit bar</a>
           </div>
         </div>
       </div>

@@ -9,13 +9,15 @@ import { AppRoutingModule }   from './app-routing.module';
 import { BarsComponent }      from './bars/bars.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
 import { BarService }         from './bar.service';
+import { BarEditComponent }   from './bar-edit/bar-edit.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BarsComponent,
-    BarDetailComponent
+    BarDetailComponent,
+    BarEditComponent
   ],
   imports: [
     BrowserModule,
