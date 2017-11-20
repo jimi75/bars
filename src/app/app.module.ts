@@ -5,14 +5,13 @@ import { HttpClientModule }   from '@angular/common/http';
 
 import { AppComponent }       from './app.component';
 import { AppRoutingModule }   from './app-routing.module';
-
 import { BarsComponent }      from './bars/bars.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
-import { BarService }         from './bar.service';
 import { BarEditComponent }   from './bar-edit/bar-edit.component';
+import { BarService }         from './bar.service';
 
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }            from './in-memory-data.service';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }            from './in-memory-data.service';
 
 
 @NgModule({
@@ -25,8 +24,8 @@ import { InMemoryDataService }            from './in-memory-data.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [BarService],
   bootstrap: [AppComponent]

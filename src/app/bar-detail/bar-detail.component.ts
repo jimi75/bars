@@ -68,6 +68,6 @@ export class BarDetailComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    if(this.bar) { this.makeBarMap(this.bar); }
+    this.makeBarMap(this.bar); 
   }
 }
