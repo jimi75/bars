@@ -1,0 +1,8 @@
+.zombie img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.zombie.selected img {
+  filter: initial;
+}

@@ -1,0 +1,49 @@
+<form #barForm="ngForm" (ngSubmit)='onSubmit()'>
+  <div class="grid-x grid-margin-y">
+
+    <div class="cell">
+      <h2>ADD BAR</h2>
+    </div>
+
+      <div class="cell medium-6">
+        <div class="grid-x">
+          <div class="cell">
+            <h4 class="cell">Bar info</h4>
+          </div>
+          <div class="cell">
+            <div class="input-group"> 
+              <span class="input-group-label">Title</span>
+                <input id="barTitle" name="title"  [(ngModel)]="bar.title" class="input-group-field" type="text" placeholder="Type a bar name" required>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="input-group"> 
+              <span class="input-group-label">Content</span>
+              <input id="barContent" name="content" [(ngModel)]="bar.content" class="input-group-field" type="text" placeholder="Type a bar content" required>
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="input-group"> 
+              <span class="input-group-label">Lng</span>
+              <input id="barLat" name="lat" [(ngModel)]="bar.lat" class="input-group-field" type="text" placeholder="Type a latitud" required>
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="input-group"> 
+              <span class="input-group-label">Lat</span>
+              <input id="barLong" name="lat" [(ngModel)]="bar.long" class="input-group-field" type="text" placeholder="Type a longitud" required>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+    <h4 class="cell">Choose a zombie for this bar</h4>
+    <div class="cell medium-2 zombie" *ngFor="let zombie of zombies" [class.selected]="zombie === selectedZombie">
+      <img class="thumbnail" src="{{ zombie }}" (click)="onZombieSelected(zombie)">
+    </div>
+  </div>
+  <button class="button" type="submit">ADD BAR</button>
+</form>
+
+

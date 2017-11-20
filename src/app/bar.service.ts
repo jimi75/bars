@@ -22,6 +22,14 @@ export class BarService {
     return of(BARS.find(bar => bar.id === id));
   }
 
+  addBar(bar: Bar): Observable<Bar[]> {
+    bar.id = BARS.length + 1;
+    BARS.push(bar);
+    console.log(BARS)
+    return of(BARS);
+    
+  }
+
   updateBar(bar: Bar): Observable<Bar> {
     BARS[BARS.findIndex(el => el.id === bar.id)] = bar;
     return of(bar);

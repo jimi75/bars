@@ -4,6 +4,8 @@ import { Location }               from '@angular/common';
 
 import { Bar }            from '../bar';
 import { BarService }     from '../bar.service';
+import { ZOMBIES }        from '../zombies';
+
 
 @Component({
   selector: 'app-bar-edit',
@@ -13,14 +15,7 @@ import { BarService }     from '../bar.service';
 
 export class BarEditComponent implements OnInit {
 
-  zombies: Array<string> = [
-    'http://placezombie.com/245x245',
-    'http://placezombie.com/255x255',
-    'http://placezombie.com/265x265',
-    'http://placezombie.com/275x275',
-    'http://placezombie.com/282x282',
-    'http://placezombie.com/305x305'
-  ];
+  zombies =  ZOMBIES;
 
   bar: Bar;
   selectedZombie: string;

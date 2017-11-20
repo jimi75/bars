@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Bar }            from '../bar';
-import { BARS }           from '../mock-bars';
-import { BarService }     from '../bar.service';
+import { Bar }               from '../bar';
+import { BARS }              from '../mock-bars';
+import { BarService }        from '../bar.service';
 
 @Component({
   selector: 'app-bars',
@@ -27,10 +27,6 @@ export class BarsComponent implements OnInit {
 
   onSelect(bar: Bar): void {
     this.selectedBar = bar;
-  }  
-
-  onClose(): void {
-    this.selectedBar = null;
   }
 
   onDelete(bar: Bar): void {

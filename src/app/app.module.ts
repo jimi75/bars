@@ -9,6 +9,7 @@ import { BarsComponent }      from './bars/bars.component';
 import { BarDetailComponent } from './bar-detail/bar-detail.component';
 import { BarEditComponent }   from './bar-edit/bar-edit.component';
 import { BarService }         from './bar.service';
+import { BarAddComponent } from './bar-add/bar-add.component';
 
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }            from './in-memory-data.service';
@@ -19,7 +20,8 @@ import { BarService }         from './bar.service';
     AppComponent,
     BarsComponent,
     BarDetailComponent,
-    BarEditComponent
+    BarEditComponent,
+    BarAddComponent
   ],
   imports: [
     BrowserModule,

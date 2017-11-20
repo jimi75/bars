@@ -59,7 +59,6 @@ export class BarDetailComponent implements OnInit {
   }
 
   onModalClosed () {
-    this.close.emit();
     this.router.navigate(['bars']);
   }
 
