@@ -30,7 +30,8 @@ export class BarEditComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.barService.getBar(id)
       .subscribe(bar => { 
-        this.bar = bar
+        this.bar = bar;
+        this.selectedZombie = bar.image_url;
       });
   }
 

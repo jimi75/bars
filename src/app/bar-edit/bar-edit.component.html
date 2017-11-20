@@ -35,7 +35,7 @@
   </div>
 </div>
 <div class="grid-x grid-margin-x">
-  <h4 class="cell">Choose a zombie for this bar</h4>
+  <h4 class="cell">Change bar zombie</h4>
   <div class="cell medium-2 zombie" *ngFor="let zombie of zombies" [class.selected]="zombie === selectedZombie">
     <img class="thumbnail" src="{{ zombie }}" (click)="onZombieSelected(zombie)">
   </div>

@@ -31,8 +31,8 @@ export class BarAddComponent implements OnInit {
 
   bar = new Bar();
 
-  onSubmit(data) {
-    
+  onSubmit() {
+
     if(!this.selectedZombie) {
       alert('You need to choose a zombie!');
       return false;
